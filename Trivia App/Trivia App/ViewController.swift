@@ -39,9 +39,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func history(_ sender: UIButton) {
-        let story =  UIStoryboard(name: "Main", bundle: nil)
-        let vc = story.instantiateViewController(identifier: "SummaryVC")
-        self.navigationController?.present(vc, animated: true, completion: nil)
+        performSegue(withIdentifier: "CricketerVC", sender: self)
     }
     
     @objc func reset() {

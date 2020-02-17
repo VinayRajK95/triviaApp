@@ -36,9 +36,7 @@ class CricketerViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         guard let cricketer = cricketerTF.text else { return  }
         appdelegate.user.favCricketer = cricketer
-        let story =  UIStoryboard(name: "Main", bundle: nil)
-        let vc = story.instantiateViewController(identifier: "ColorsVC")
-        self.navigationController?.pushViewController(vc, animated: true)
+        performSegue(withIdentifier: "ColorsVC", sender: self)
     }
     
     
